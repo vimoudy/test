@@ -6,6 +6,10 @@ include: "*.view"
 # include all the dashboards
 include: "*.dashboard"
 
+datagroup: Day_to_Day {
+  sql_trigger: SELECT CURRENT_DATE() ;;
+}
+
 explore: accidents {
   join: airports {
     type: left_outer
